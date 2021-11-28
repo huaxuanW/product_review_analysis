@@ -19,3 +19,5 @@ MODEL_PATH = os.path.join(CODE_DIR, 'model/saved_weights5.pkl')
 MODEL_NAME = 'uer/roberta-base-finetuned-jd-full-chinese'
 
 SAVED_PATH = os.path.join(OUTPUT_DIR, 'prediction.csv')
+
+ORIGINAL_DATA_PATH = os.path.join(DATA_DIR, "t_std_comment_his.xlsx")
