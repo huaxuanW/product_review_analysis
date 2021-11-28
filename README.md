@@ -44,6 +44,7 @@ sh train.sh
 
 ## Predict Product Review
 ---
+预测存放在`/data`里的数据，预测结果会保存在`/outputs`
 ```bash
 sh inference.py
 ```
@@ -93,5 +94,15 @@ DIR
 | Pretrain Bert | 0.89 |
 | Pretrain XLNet | 0.91 |
 | Pertrain RoBerta | 0.92 |
-| Pertrain Roberta + Attention | 0.90 |
+| Pertrain Roberta + Attention | 0.91 |
 | Pertrain Roberta + Data Augment | 0.66 |
+
+## Notes
+除了看了很多篇论文外，美团算法团队的文章提供了很多思路
+
+
+## Reference
+---
+- 电商词典 https://github.com/zeitiempo/ECSD
+- 哈工大停用词 https://github.com/goto456/stopwords
+- 美团算法团队 https://tech.meituan.com/
