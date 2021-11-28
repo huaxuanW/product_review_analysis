@@ -1,0 +1,7 @@
+jieba
+openpyxl
+pandas
+regex
+scikit-learn
+tqdm
+transformers
