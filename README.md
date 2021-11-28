@@ -35,8 +35,11 @@ source init.sh   # 默认安装torch + cuda 11.3
 ## Train
 ---
 Train sentiment analysis model
-需要在src/config.py 第23行修改新数据文件名
-如果其中正样本或负样本数量太少，可能无法正常`train_test_split`
+- **首先需要将新数据xlsx文件放在data文件夹下，并在src/config.py 第23行修改成新数据文件名**
+- 如果使用训练好的模型可跳过Train这一步
+- 可能的报错原因有：
+    1. GPU内存不足，需要调小`config.py`里的`MAX_LEN`或`train.py`里的`BATCH_SIZE`
+    2. 正样本或负样本数量太少，无法正常使用`train_test_split`
 ```bash
 # 在src/config.py里设置参数
 sh train.sh
@@ -44,7 +47,10 @@ sh train.sh
 
 ## Predict Product Review
 ---
-预测存放在`/data`里的数据，预测结果会保存在`/outputs`
+- 预测存放在`/data`里的数据，预测结果会保存在`/outputs`
+- 可能的报错原因有：
+    1. data文件夹里存在多个xlsx文件
+    2. 使用torch cpu版本可能会出错
 ```bash
 sh inference.py
 ```
