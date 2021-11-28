@@ -83,3 +83,15 @@ DIR
             0.92_max_len_200_saved_weights5.pkl #训练好的模型
             robert_model.py   #模型结构
 ```
+
+
+## Model Comparison
+---
+| Model | Accuracy |
+| ------| -------- |
+| CNN + RNN | 0.83 |
+| Pretrain Bert | 0.89 |
+| Pretrain XLNet | 0.91 |
+| Pertrain RoBerta | 0.92 |
+| Pertrain Roberta + Attention | 0.90 |
+| Pertrain Roberta + Data Augment | 0.66 |
